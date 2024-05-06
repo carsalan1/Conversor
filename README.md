@@ -31,3 +31,16 @@ El proyecto consta de un archivo principal llamado `Main.java`. Este archivo con
 - La aplicación utiliza un servicio de tasas de cambio en línea para obtener las tasas de conversión entre diferentes monedas.
 - Se hace una solicitud HTTP al servicio utilizando la URL proporcionada con la moneda base como parámetro.
 - La respuesta se analiza para obtener las tasas de conversión y se utiliza para realizar las conversiones de moneda.
+- El servicio en línea utilizado para obtener las tasas de cambio es ExchangeRate-API. Este servicio proporciona datos precisos y actualizados sobre las tasas de cambio entre diferentes monedas.
+
+URL para las Tasas de Cambio:
+La URL para acceder a las tasas de cambio proporcionadas por ExchangeRate-API es la siguiente:
+https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{BASE_CURRENCY}
+
+{API_KEY}: Se refiere a la clave de API proporcionada por ExchangeRate-API. Debes registrarte en su plataforma para obtener tu propia clave de API.
+{BASE_CURRENCY}: Especifica la moneda base para la cual se desean obtener las tasas de cambio. En el código proporcionado, se utiliza la moneda base dinámicamente basada en la selección del usuario.
+La API responde con un objeto JSON que contiene las tasas de cambio entre la moneda base especificada y otras monedas.
+
+Por ejemplo, si {API_KEY} es "YOUR_API_KEY" y {BASE_CURRENCY} es "USD" (dólar estadounidense), la URL sería:
+https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
+Al hacer una solicitud GET a esta URL, obtendrás un objeto JSON que contiene las tasas de cambio para el dólar estadounidense en relación con otras monedas.
